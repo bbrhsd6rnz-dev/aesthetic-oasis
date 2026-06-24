@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esthétique Médicale | 100% Femmes</title>
+<link rel="icon" type="image/png" href="file:///C:/Users/poste/Desktop/bbbbbb/logo.png">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#333;
+        overflow-x:hidden;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('file:///C:/Users/poste/Desktop/bbbbbb/secpic.jpg');
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#e8b4bc;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+    display:inline-block;
+    padding:15px 35px;
+    margin:10px;
+}
+
+.btn:hover{
+    background:#d997a4;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+    color:#c48c96;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:center;
+      width:100%;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#c48c96;
+}
+
+.services{
+    background:#fdf6f7;
+}
+
+.contact{
+    background:#2d2d2d;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th{
+background:#e8b4bc;
+color:white;
+padding:12px;
+}
+
+table td{
+padding:12px;
+border:1px solid #eee;
+}
+
+.card p{
+margin:8px 0;
+line-height:1.5;
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px){
+
+    .hero-content h1{
+        font-size:55px;
+    }
+
+    .hero-content h2{
+        font-size:28px;
+    }
+
+    .hero-content p{
+        font-size:20px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    section{
+        padding:60px 5%;
+    }
+
+    .hero{
+        height:auto;
+        min-height:100vh;
+        padding:50px 20px;
+        position:relative;
+    overflow:hidden;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content h2{
+        font-size:22px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .title{
+        font-size:30px;
+    }
+
+    .btn{
+        padding:12px 25px;
+        font-size:14px;
+        transition:all .3s ease;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content h2{
+        font-size:18px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .title{
+        font-size:24px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .logo-mark{
+        font-size:70px;
+        letter-spacing:5px;
+    }
+
+}
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:15px 8%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:9999;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#c48c96;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c48c96;
+}
+.card{
+    transition:all .4s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+.btn:hover{
+    background:#d997a4;
+    transform:scale(1.05);
+}
+.hero-content{
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;}
+</style>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="logo">Aesthetic Oasis</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#promo">Promotions</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Aesthetic Oasis</h1>
+<h2>Centre Esthétique Médicale</h2> <br>
+
+<p>
+Amincissement • Soins du Visage • Épilation Laser • HIFU
+<br>
+HydraLips • Microneedling • Radiofréquence
+<br>
+Lifting Colombien • Madérothérapie
+</p>
+
+<a href="#contact" class="btn">
+Réserver Maintenant
+</a>
+</div>
+</section>
+
+<section>
+<h2 class="title">Pourquoi Nous Choisir ?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌸 100% Femmes</h3>
+<p>Espace privé, confortable et sécurisé.</p>
+</div>
+
+<div class="card">
+<h3>👩‍⚕️ Expertise</h3>
+<p>Professionnelles qualifiées et expérimentées.</p>
+</div>
+
+<div class="card">
+<h3>✨ Résultats</h3>
+<p>Programmes personnalisés selon vos besoins.</p>
+</div>
+
+</div>
+</section>
+
+<section id="services" class="services">
+<h2 class="title">Nos Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚖️ Amincissement</h3>
+<p>
+Programmes personnalisés pour la perte de poids,
+raffermissement et remodelage de la silhouette.
+</p>
+</div>
+
+<div class="card">
+<h3>✨ Soins du Visage</h3>
+<p>
+Nettoyage profond, hydratation,
+éclat et traitements anti-âge.
+</p>
+</div>
+
+<div class="card">
+<h3>🔥 Épilation Laser</h3>
+<p>
+Épilation durable grâce à une technologie
+performante et sécurisée.
+</p>
+</div>
+
+<div class="card">
+<h3>💋 HydraLips</h3>
+<p>
+Hydratation intense et soin des lèvres
+pour un aspect naturel et lumineux.
+</p>
+</div>
+
+<div class="card">
+<h3>🌟 Microneedling</h3>
+<p>
+Stimule la production de collagène,
+réduit les cicatrices et les imperfections.
+</p>
+</div>
+
+<div class="card">
+<h3>📡 Radiofréquence</h3>
+<p>
+Raffermissement de la peau et effet
+anti-âge sans chirurgie.
+</p>
+</div>
+
+<div class="card">
+<h3>🍑 Lifting Colombien</h3>
+<p>
+Technique esthétique non invasive
+pour galber et remodeler les formes.
+</p>
+</div>
+
+<div class="card">
+<h3>🌿 Madérothérapie</h3>
+<p>
+Massage avec instruments en bois
+pour drainer et sculpter le corps.
+</p>
+</div>
+
+<div class="card">
+<h3>💎 HIFU</h3>
+<p>
+Lifting par ultrasons focalisés
+pour raffermir le visage et le corps.
+</p>
+</div>
+
+</div>
+</section>
+<!-- ================= TARIFS ================= -->
+
+<section id="tarifs" class="services">
+<h2 class="title">💰 Nos Tarifs</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💎 HIFU Visage</h3>
+<p>Visage complet : 2000 DH</p>
+<p>Visage entier : 1400 DH</p>
+<p>Cou + Double menton : 1200 DH</p>
+<p>Double menton : 800 DH</p>
+<p>Cou : 800 DH</p>
+<p>Bas joues : 500 DH</p>
+<p>Sourcils Front : 500 DH</p>
+<p>Patte d'oie & Cernes : 500 DH</p>
+</div>
+
+<div class="card">
+<h3>🌟 Microneedling</h3>
+<p>Micro Lèvres : 400 DH</p>
+<p>Micro Anti Age : 600 DH</p>
+<p>Micro Acné : 600 DH</p>
+<p>Micro Acné Spécial : 700 DH</p>
+<p>Micro Taches : 600 DH</p>
+<p>Micro Taches Spécial : 750 DH</p>
+<p>Micro Capillaire : 800 DH</p>
+<p>Micro VIP : 1000 DH</p>
+</div>
+
+<div class="card">
+<h3>⚖️ Amincissement</h3>
+<p>Maderothérapie : 300 DH</p>
+<p>Lipocavitation : 300 DH</p>
+<p>Radiofréquence : 200 DH</p>
+<p>Palper Rouler : 150 DH</p>
+<p>Presso-thérapie : 150 DH</p>
+<p>Électrostimulation : 150 DH</p>
+</div>
+
+<div class="card">
+<h3>💆 Massage</h3>
+<p>Visage & Cuir chevelu : 100 DH</p>
+<p>Corps : 350 DH</p>
+<p>Corps Complet : 400 DH</p>
+</div>
+
+</div>
+</section>
+
+<!-- ================= SOINS VISAGE ================= -->
+
+<section>
+<h2 class="title">✨ Soins du Visage</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Soins Manuels</h3>
+<p>Basic : 250 DH</p>
+<p>Mini Éclat : 300 DH</p>
+<p>Detox : 350 DH</p>
+<p>Profond : 400 DH</p>
+<p>Voile de Pureté : 450 DH</p>
+<p>Hydratant Oxygénant : 500 DH</p>
+<p>Éclat de Lumière : 450 DH</p>
+<p>Évasion Jeunesse : 600 DH</p>
+</div>
+
+<div class="card">
+<h3>Hydra Facial</h3>
+<p>Basic : 400 DH</p>
+<p>Mini Éclat : 450 DH</p>
+<p>Detox : 500 DH</p>
+<p>Profond : 550 DH</p>
+<p>Voile de Pureté : 600 DH</p>
+<p>Hydratant Oxygénant : 650 DH</p>
+<p>Éclat de Lumière : 600 DH</p>
+<p>Évasion Jeunesse : 750 DH</p>
+</div>
+
+</div>
+</section>
+
+<!-- ================= PACKS LASER ================= -->
+
+<section class="services">
+<h2 class="title">🎁 Packs Épilation Laser</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Pack Douceur</h3>
+<p>Visage Doux : 450 DH</p>
+<p>Éclat Visage : 450 DH</p>
+<p>Body Basic : 550 DH</p>
+<p>Jambes Douces : 700 DH</p>
+<p>Féminité : 850 DH</p>
+</div>
+
+<div class="card">
+<h3>Pack Séduction</h3>
+<p>Summer Ready : 1200 DH</p>
+<p>Confiance Totale : 1200 DH</p>
+<p>Silhouette Fit : 1600 DH</p>
+<p>Femme Active : 1000 DH</p>
+<p>Visage Complet : 600 DH</p>
+</div>
+
+<div class="card">
+<h3>Pack Premium</h3>
+<p>Corps Complet : 2000 DH</p>
+<p>Tous Corps + Visage : 2200 DH</p>
+<p>3 séances entretien : 5400 DH</p>
+</div>
+
+</div>
+</section>
+
+<!-- ================= OFFRES ================= -->
+<section id="promo">
+<h2 class="title">🔥 Promotions</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Microneedling</h3>
+<p>-20% pour 4 séances</p>
+</div>
+
+<div class="card">
+<h3>RF Fractionné</h3>
+<p>-20% pour 3 séances</p>
+</div>
+
+<div class="card">
+<h3>Blanchiment Dentaire</h3>
+<p>3 séances : 800 DH</p>
+<p>Au lieu de 1500 DH</p>
+</div>
+
+<div class="card">
+<h3>Laser Illimité 1 An</h3>
+<p>Solo : à partir de 7500 DH</p>
+<p>Duo : à partir de 6500 DH</p>
+</div>
+
+</div>
+</section>
+
+
+<section>
+<h2 class="title">Nos Résultats</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>1000+</h3>
+<p>Clientes satisfaites</p>
+</div>
+
+<div class="card">
+<h3>98%</h3>
+<p>Taux de satisfaction</p>
+</div>
+
+<div class="card">
+<h3>24/7</h3>
+<p>Support & accompagnement</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contactez-Nous</h2>
+
+<p>📍 Tanger, Maroc</p>
+<p>Lot Laayoun 2TR LT 70-72-74 Residence Akrame Office Etg 1 Appt 6, 90000. </p>
+<p>📞 +212 (0) 775 863 810</p>
+
+
+<br>
+
+<a class="btn"
+href="https://wa.me/0775863810">
+WhatsApp
+</a>
+<a href="https://www.instagram.com/aesthetic_oasis_tanger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn">
+ Instagram
+</a>
+<a href="https://www.facebook.com/513169538557276?ref=PROFILE_EDIT_xav_ig_profile_page_web" target="_blank" class="btn">
+Facebook
+</a>
+
+</section>
+
+<footer>
+© 2026 Centre Esthétique Médicale - Tous droits réservés.
+</footer>
+
+</body>
+</html>
